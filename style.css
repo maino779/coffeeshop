@@ -1,0 +1,352 @@
+@charset "UTF-8";
+html {
+  font-family: sans-serif, serif, "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo";
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+
+.wrapper {
+  max-width: 1000px;
+  padding: 16px 0;
+  margin: 0 auto;
+}
+
+.contentsWrapper {
+  margin: 0 auto;
+}
+
+.title {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  right: 50%;
+}
+
+.sub-title {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  font-size: 60px;
+}
+
+.menu-title {
+  font-size: 40px;
+  border-bottom: 5px solid red;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+li {
+  list-style: none;
+}
+
+.header-menuIcon {
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+  font-size: 14px;
+}
+
+.header-menuIcon:hover {
+  color: red;
+}
+
+.header {
+  background-image: url(img/mainvisual.jpg);
+  background-size: cover;
+  object-fit: cover;
+  background-position: center top;
+  padding: 20px 40px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-menuList {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-image {
+  background-image: url(img/menu.jpg);
+  position: relative;
+  margin-top: 25px;
+}
+
+.fixedimg {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+}
+
+.menu-contents {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 0 50px 0 50px;
+  margin-bottom: 50px;
+}
+
+.menu-contentsRight {
+  display: block;
+  margin-left: 50px;
+  width: 50%;
+}
+
+.menu-contentsLeft {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.menu-contentsLeft:first-child {
+  border-right: 1px solid #000000;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 50px;
+}
+
+.menuList-title {
+  width: 80%;
+  border-bottom: 1px dotted #000000;
+}
+
+.menu-content:last-child {
+  margin-top: 125px;
+}
+
+.menuList-price {
+  width: 20%;
+  margin-left: 0;
+  border-bottom: 1px dotted #000000;
+}
+
+.about-image {
+  background-image: url(img/about.jpg);
+  position: relative;
+}
+
+.about-contentsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.about-list {
+  width: 48%;
+  line-height: 2;
+  text-align: left;
+  padding: 1%;
+}
+
+.about-section {
+  margin-top: 200px;
+}
+
+.about-title {
+  margin-bottom: 50px;
+}
+
+.read {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.readlink span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.readlink span::before,
+.readlink span::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: red;
+  transition: all 0.3s ease;
+}
+
+.readlink {
+  width: 160px;
+  height: 50px;
+  line-height: 3.5;
+  display: inline-block;
+  color: #000;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.readlink::before,
+.readlink::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: red;
+  transition: all 0.3s ease;
+}
+
+.readlink span::before,
+.readlink span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: red;
+  transition: all 0.3s ease;
+}
+
+.readlink::before,
+.readlink span::before {
+  width: 2px;
+  height: 50%;
+}
+
+.readlink::after,
+.readlink span::after {
+  width: 20%;
+  height: 2px;
+}
+
+/*
+ホバー時の縦の動作
+右の赤線と左の赤線の高さを100%にする
+*/
+.readlink:hover::before,
+.readlink span:hover::before {
+  height: 100%;
+}
+
+/*
+ホバー時の横の動作
+下の赤線と上の赤線の横幅を100%にする
+*/
+.readlink:hover::after,
+.readlink span:hover::after {
+  width: 100%;
+}
+
+.location-section {
+  margin-top: 50px;
+}
+
+.location-image {
+  background-image: url(img/location.jpg);
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.location-map {
+  margin-top: 80px;
+  filter: grayscale(1);
+  width: 100%;
+}
+
+.location-mapImage {
+  width: 100%;
+  height: 50vh;
+  padding: 0 20px 0 20px;
+}
+
+.location-map iframe {
+  padding-left: 0;
+}
+
+.location-content {
+  padding: 0 20px 0 20px;
+}
+
+.adress-list {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 150px;
+}
+
+.footer-title {
+  font-size: 8px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .fixed-bg {
+    height: 94px;
+    /* スマホ時は背景をスクロールするように変更 */
+    background-attachment: scroll;
+  }
+  .header-menuIcon {
+    font-size: 20px;
+  }
+  .menu-contents {
+    flex-direction: column;
+  }
+  .menu-contentsLeft:first-child {
+    border-right: none;
+  }
+  .menu-contentsLeft {
+    padding-right: 0;
+    width: 100%;
+  }
+  .menu-contentsRight {
+    width: 100%;
+    margin-left: 0;
+  }
+  .menu-title {
+    text-align: center;
+  }
+  .menu-content,
+  .menu-content:nth-child(2) {
+    margin-top: 50px;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .about-contentsList {
+    flex-direction: column;
+  }
+  .about-list {
+    width: 100%;
+    text-align: justify;
+  }
+  .location-section {
+    width: 100%;
+  }
+  .location-map iframe {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
