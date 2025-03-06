@@ -22,7 +22,9 @@ html {
   position: absolute;
   top: 40%;
   left: 50%;
-  right: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  right: auto;
 }
 
 .sub-title {
@@ -32,7 +34,9 @@ html {
   text-align: center;
   width: 100%;
   position: absolute;
-  top: 30%;
+  top: 35%;
+  right: 0;
+  left: 0;
   font-size: 60px;
 }
 
@@ -304,13 +308,30 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+  .sub-title {
+    font-size: 40px;
+  }
+  .wrapper {
+    padding: 16px 15px;
+  }
   .fixed-bg {
     height: 94px;
     /* スマホ時は背景をスクロールするように変更 */
     background-attachment: scroll;
   }
+  .header-menuList {
+    margin-right: 0;
+  }
   .header-menuIcon {
-    font-size: 20px;
+    font-size: 14px;
+  }
+  .tile {
+    width: 100%;
+    text-align: center;
+  }
+  .title img {
+    width: 300px;
+    margin: 0;
   }
   .menu-contents {
     flex-direction: column;
@@ -346,7 +367,12 @@ li {
   .location-section {
     width: 100%;
   }
+  .location-map {
+    width: 100%;
+    margin: 30px auto;
+  }
   .location-map iframe {
     width: 100%;
+    padding-right: 0;
   }
 }/*# sourceMappingURL=style.css.map */
